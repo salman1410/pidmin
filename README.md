@@ -6,6 +6,6 @@ git clone http://github.com/salman1410/pidmin/
 
 # Usage:
 cd pidmin-master
-python pidminv1.0.py
+python pidminv 1.0.py
 
 TESTED IN KALI LINUX 2017
