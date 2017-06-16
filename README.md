@@ -1,2 +1,11 @@
 # pidmin
-PYTHON powered admin panel finder
+Admin Finder powered by Python
+
+# Setup:
+git clone http://github.com/salman1410/pidmin/
+
+# Usage:
+cd pidmin-master
+python pidminv1.0.py
+
+TESTED IN KALI LINUX 2017
