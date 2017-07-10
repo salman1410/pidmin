@@ -12,6 +12,6 @@ admin finder powered by python
 * `python pidmin.py`
 
 ### SCREENSHOTS
-* ![ScreenShot](/images/pic01.png)
-* ![ScreenShot](/images/pic02.png)
-* ![ScreenShot](/images/pic03.png)
+![ScreenShot](/images/pic01.png)
+![ScreenShot](/images/pic02.png)
+![ScreenShot](/images/pic03.png)
