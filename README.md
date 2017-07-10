@@ -10,3 +10,6 @@ admin finder powered by python
 * `git clone https://github.com/salman1410/pidmin/`
 * `cd pidmin`
 * `python pidmin.py`
+
+###SCREENSHOTS
+![ScreenShot](/images/pic01.png)
