@@ -1,13 +1,12 @@
-# pidmin
-Admin Finder powered by Python
+### PIDMIN
+admin finder powered by python
 
-# Setup:
-git clone http://github.com/salman1410/pidmin/
+### REQUIREMENTS
+* `python`(Version 2 or 3)
+* `pip`(Python Package Manager)
+* `requests`(Python Module). If Missing `pip install requests`
 
-# Usage:
-cd pidmin
-
-
-python pidmin.py
-
-TESTED IN KALI LINUX 2017
+### SETUP & USAGE
+* `git clone https://github.com/salman1410/pidmin/`
+* `cd pidmin`
+* `python pidmin.py`
