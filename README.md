@@ -11,6 +11,10 @@ admin finder powered by python
 * `cd pidmin`
 * `python pidmin.py`
 
+### NOTE
+* You can add your own panels in `panels.txt`
+* Teted on KALI LINUX 2017
+
 ### SCREENSHOTS
 ![ScreenShot](/images/pic01.png)
 ![ScreenShot](/images/pic02.png)
