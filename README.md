@@ -13,7 +13,7 @@ admin finder powered by python
 
 ### NOTE
 * You can add your own panels in `panels.txt`
-* Teted on KALI LINUX 2017
+* Tested on KALI LINUX 2017
 
 ### SCREENSHOTS
 ![ScreenShot](/images/pic01.png)
