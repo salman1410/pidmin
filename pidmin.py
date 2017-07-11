@@ -1,22 +1,22 @@
 #!/usr/bin/python
 ############################
-#       pidmin v1.0        #
+#       pidmin v2.0        #
 # developed by SALMAN ASAD #
-#                          #
+#  github.com/salman1410/  #
 ############################
 
 import requests
 
-welcome="""
- _____  _                    _                                      
-|  _  ||_|     _            |_|   v1.0       
-| |_| | _  ___| | _________  _  _____ 
-|  ___|| ||  _  ||  _   _  || ||  _  | 
-| |    | || |_| || | | | | || || | | |
-|_|    |_||_____||_| |_| |_||_||_| |_|
-admin finder ~developed by SALMAN ASAD"""
+print "\033[1;34m                                        ___   \033[1;m"                                  
+print "\033[1;34m _____         _                       / _ \  \033[1;m"                              
+print "\033[1;34m|  _  | *     | |            *   v2.0 /_/ \ \ \033[1;m"       
+print "\033[1;34m| |_| | _  ___| | _________  _  _____     / / \033[1;m"
+print "\033[1;34m|  ___|| ||  _  ||  _   _  || ||  _  |   / /  \033[1;m" 
+print "\033[1;34m| |    | || |_| || | | | | || || | | |  / /   \033[1;m"
+print "\033[1;34m|_|    |_||_____||_| |_| |_||_||_| |_| / /___ \033[1;m"
+print "\033[1;34m     https://github.com/salman1410    /______|\033[1;m"
 
-def Admin():
+try:
 	o = open("panels.txt","r");
 	targetlink = raw_input("\nenter target url:")
 	print "searching for admin panel, please wait...\n"
@@ -27,9 +27,11 @@ def Admin():
 		finallink = "http://"+targetlink+"/"+panellink
 		search = requests.head(finallink)
             	if search.status_code < 400:
-			print "[+]FOUND:",finallink
+			print "\033[1;32m[+]FOUND:\033[1;m",finallink
+#		else:
+#			print "\033[1;31m[-]NOTFOUND:\033[1;m",finallink
+	
 		     
+except (KeyboardInterrupt, SystemExit):
+    print "\n\t\033[1;31m[!]ABORTED\033[1;m"
 
-print(welcome)
-Admin()
-print "search complete"
