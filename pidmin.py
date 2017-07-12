@@ -1,24 +1,27 @@
 #!/usr/bin/python
 ############################
-#       pidmin v2.0        #
+#         pidmin           #
 # developed by SALMAN ASAD #
 #  github.com/salman1410/  #
 ############################
 
 import requests
 
-print "\033[1;34m        .__    .___      .__        ________  \033[1;m"
-print "\033[1;34m ______ |__| __| _/_____ |__| ____  \_____  \ \033[1;m"
-print "\033[1;34m \____ \|  |/ __ |/     \|  |/    \  /  ____/ \033[1;m"
-print "\033[1;34m |  |_> >  / /_/ |  Y Y  \  |   |  \/       \ \033[1;m"
-print "\033[1;34m |   __/|__\____ |__|_|  /__|___|  /\_______ \\033[1;m"
-print "\033[1;34m |__|           \/     \/        \/         \/\033[1;m"
-print "\033[1;34m         https://github.com/salman1410        \033[1;m"  
+print \
+"""
+        .__    .___      .__        ________  
+ ______ |__| __| _/_____ |__| ____  \_____  \ 
+ \____ \|  |/ __ |/     \|  |/    \  /  ____/ 
+ |  |_> >  / /_/ |  Y Y  \  |   |  \/       \ 
+ |   __/|__\____ |__|_|  /__|___|  /\_______ \ 
+ |__|           \/     \/        \/         \/ 
+         https://github.com/salman1410
+"""          
 
-try:
+def main():
 	o = open("panels.txt","r");
-	targetlink = raw_input("\nenter target url:")
-	print "searching for admin panel, please wait...\n"
+	targetlink = raw_input("\nenter target url~: ")
+	print "searching, please wait...\n"
 	while True:	
 		panellink = o.readline()
 		if not panellink:
@@ -26,11 +29,12 @@ try:
 		finallink = "http://"+targetlink+"/"+panellink
 		search = requests.head(finallink)
             	if search.status_code < 400:
-			print "\033[1;32m[+]FOUND:\033[1;m",finallink
-#		else:
-#			print "\033[1;31m[-]NOTFOUND:\033[1;m",finallink
-	
-		     
+			print "[+]FOUND:",finallink
+		
+def complete():
+	print "\n\t[!]COMPLETED"
+try:
+	main()
+	complete()
 except (KeyboardInterrupt, SystemExit):
-    print "\n\t\033[1;31m[!]ABORTED\033[1;m"
-
+    print "\n\t[X]ERROR: aborted by user"
