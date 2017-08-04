@@ -13,9 +13,4 @@ admin finder powered by python
 
 ### NOTE
 * You can add your own panels in `panels.txt`
-* Tested on KALI LINUX 2017 & WINDOWS 10
-
-### SCREENSHOTS
-![ScreenShot](/images/pic01.png)
-![ScreenShot](/images/pic02.png)
-![ScreenShot](/images/pic03.png)
+* Tested on ubuntu 16.04 & kali linux 2017
