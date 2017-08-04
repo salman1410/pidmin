@@ -1,40 +1,41 @@
-#!/usr/bin/python
-############################
-#         pidmin           #
-# developed by SALMAN ASAD #
-#  github.com/salman1410/  #
-############################
-
 import requests
 
-print \
+r = "\033[1;31m"
+g = "\033[1;32m"
+y = "\033[1;33m"
+b = "\033[1;34m"
+x = "\033[0;0m"
+
+banner="""
+_______________________________________
+|        .__    .___      .__         |
+| ______ |__| __| _/_____ |__| ____   |
+| \____ \|  |/ __ |/     \|  |/    \  |
+| |  |_> >  / /_/ |  Y Y  \  |   |  \ |
+| |   __/|__\____ |__|_|  /__|___|  / |
+| |__|           \/     \/        \/  |
+|                                     |
+| developed by: Salman Asad | egg sec |
+|    http://github.com/salman1410/    |
+|_____________________________________|
 """
-        .__    .___      .__        ________  
- ______ |__| __| _/_____ |__| ____  \_____  \ 
- \____ \|  |/ __ |/     \|  |/    \  /  ____/ 
- |  |_> >  / /_/ |  Y Y  \  |   |  \/       \ 
- |   __/|__\____ |__|_|  /__|___|  /\_______ \ 
- |__|           \/     \/        \/         \/ 
-         https://github.com/salman1410
-"""          
 
 def main():
 	o = open("panels.txt","r");
-	targetlink = raw_input("\nenter target url~: ")
-	print "searching, please wait...\n"
-	while True:	
-		panellink = o.readline()
-		if not panellink:
+	url = raw_input("enter url:~# ")
+	print y+"\n[!]searching, please wait..."+x
+	while True:
+		panel = o.readline()
+		if not panel:
 			break
-		finallink = "http://"+targetlink+"/"+panellink
-		search = requests.head(finallink)
+		x_url = "http://"+url+"/"+panel
+		search = requests.head(x_url)
             	if search.status_code < 400:
-			print "[+]FOUND:",finallink
-		
-def complete():
-	print "\n\t[!]COMPLETED"
+			print g+"\n[+]Found:"+x, x_url
+	print y+"\n[!]Done"+x
+
 try:
+	print(b+banner+x)
 	main()
-	complete()
 except (KeyboardInterrupt, SystemExit):
-    print "\n\t[X]ERROR: aborted by user"
+    print r+"\n[x]Aborted"+x
